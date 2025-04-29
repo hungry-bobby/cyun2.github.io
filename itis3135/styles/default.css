@@ -7,4 +7,22 @@ body {
   h1, h2, h3 {
     font-family: 'Courier New', cursive;
   }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
   
+  nav ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin-right: 15px;
+  }
