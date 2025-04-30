@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bobby Yun Slideshow</title>
+  <title>Bobby Yun's Slideshow</title>
   <link rel="stylesheet" href="styles/default.css" />
   <style>
     body {
@@ -43,15 +42,16 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Bobby Yun's Alphabet Slideshow</h1>
-    <p>Each letter represents an object starting with that letter from my name</p>
+    <p>Each image corresponds to a letter in my full name: BOBBY YUN</p>
   </header>
 
   <main>
     <div class="slideshow-container">
-      <img id="slide" class="slide" src="images/B_ball.jpg" alt="B for Ball" />
-      <div class="caption" id="caption">B - Ball</div>
+      <img id="slide" class="slide" src="images/banana.jpg" alt="B - Banana" />
+      <div class="caption" id="caption">B - Banana</div>
     </div>
 
     <div class="controls">
@@ -62,26 +62,25 @@
     <section>
       <h2>Image References</h2>
       <ul class="references">
-        <li>B - Ball (AI generated)</li>
-        <li>O - Owl (AI generated)</li>
-        <li>B - Book (AI generated)</li>
-        <li>B - Banana (AI generated)</li>
-        <li>Y - Yo-yo (AI generated)</li>
-        <li>Y - Yacht (AI generated)</li>
-        <li>U - Umbrella (AI generated)</li>
-        <li>N - Necklace (AI generated)</li>
+        <li>B - Banana</li>
+        <li>O - Octopus</li>
+        <li>B - Book</li>
+        <li>B - Basketball</li>
+        <li>Y - Yo-yo</li>
+        <li>Y - Yak</li>
+        <li>U - Umbrella</li>
+        <li>N - Necklace</li>
       </ul>
     </section>
 
     <section>
       <h3>Notes</h3>
       <ul>
-        <li>AI tool used: Bing Image Creator</li>
-        <li>No external help received.</li>
-        <li>No major issues encountered during implementation.</li>
-        <li>This is my own original work and I did not copy/paste any code from others.</li>
+        <li>All images were from Google images</li>
+        <li>No external help received; completed independently</li>
+        <li>This is entirely my own work and did not copy any other student's code</li>
       </ul>
-      <p>Signed, Bobby Yun, 04/30/2025 1:00 AM</p>
+      <p>Signed, Bobby Yun, 04/30/2025 1:42 AM</p>
     </section>
   </main>
 
@@ -97,24 +96,25 @@
       { src: "images/necklace.jpg", caption: "N - Necklace" }
     ];
 
-    let currentSlide = 0;
+    let current = 0;
 
     function showSlide(index) {
-      const slide = slides[index];
-      document.getElementById('slide').src = slide.src;
-      document.getElementById('slide').alt = slide.caption;
-      document.getElementById('caption').textContent = slide.caption;
+      const slide = images[index];
+      document.getElementById("slide").src = slide.src;
+      document.getElementById("slide").alt = slide.caption;
+      document.getElementById("caption").textContent = slide.caption;
     }
 
     function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
+      current = (current + 1) % images.length;
+      showSlide(current);
     }
 
     function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
+      current = (current - 1 + images.length) % images.length;
+      showSlide(current);
     }
   </script>
+
 </body>
 </html>
