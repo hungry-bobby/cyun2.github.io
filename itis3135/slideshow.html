@@ -1,102 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bobby Yun Slideshow</title>
-  <link rel="stylesheet" href="styles/default.css">
+  <link rel="stylesheet" href="styles/default.css" />
   <style>
     body {
-      background-color: #00FFFF;
-      font-family: Arial, sans-serif;
+      background-color: #00ffff;
       text-align: center;
+      font-family: Arial, sans-serif;
     }
-    #slideshow-container {
-      max-width: 600px;
-      margin: 20px auto;
-    }
-    #slideshow img {
-      width: 100%;
-      height: auto;
-    }
-    #gallery img {
-      width: 100px;
-      margin: 5px;
-      cursor: pointer;
-    }
-    ul {
-      text-align: left;
-      max-width: 600px;
+
+    .slideshow-container {
       margin: auto;
+      max-width: 500px;
+      position: relative;
+    }
+
+    img.slide {
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      border: 2px solid #000;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .controls {
+      margin: 20px;
+    }
+
+    ul.references {
+      list-style-type: disc;
+      text-align: left;
+      margin: 40px auto;
+      max-width: 600px;
     }
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
   <header>
-    <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
+    <h1>Bobby Yun's Alphabet Slideshow</h1>
+    <p>Each letter represents an object starting with that letter from my name</p>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="introduction.html">Introduction</a></li>
-      <li><a href="contract.html">Contract</a></li>
-      <li><a href="website_evaluations.html">Website Evaluation</a></li>
-      <li><a href="tables.html">Tables</a></li>
-      <li><a href="slideshow.html">Slideshow</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <h2>Bobby Yun Image Slideshow</h2>
-
-    <div id="slideshow-container">
-      <div id="slideshow">
-        <img src="images/banana.jpg" alt="Banana">
-        <p id="caption">B - Banana</p>
-      </div>
-      <button id="prev">Previous</button>
-      <button id="next">Next</button>
+    <div class="slideshow-container">
+      <img id="slide" class="slide" src="images/B_ball.jpg" alt="B for Ball" />
+      <div class="caption" id="caption">B - Ball</div>
     </div>
 
-    <h3>Image List</h3>
-    <ul>
-      <li>B - Banana</li>
-      <li>O - Octopus</li>
-      <li>B - Book</li>
-      <li>B - Basketball</li>
-      <li>Y - Yo-yo</li>
-      <li>Y - Yak</li>
-      <li>U - Umbrella</li>
-      <li>N - Necklace</li>
-    </ul>
-
-    <div id="gallery">
-      <img src="images/banana.jpg" alt="B - Banana">
-      <img src="images/octopus.jpg" alt="O - Octopus">
-      <img src="images/book.jpg" alt="B - Book">
-      <img src="images/basketball.jpg" alt="B - Basketball">
-      <img src="images/yoyo.jpg" alt="Y - Yo-yo">
-      <img src="images/yak.jpg" alt="Y - Yak">
-      <img src="images/umbrella.jpg" alt="U - Umbrella">
-      <img src="images/necklace.jpg" alt="N - Necklace">
+    <div class="controls">
+      <button onclick="prevSlide()">Previous</button>
+      <button onclick="nextSlide()">Next</button>
     </div>
+
+    <section>
+      <h2>Image References</h2>
+      <ul class="references">
+        <li>B - Ball (AI generated)</li>
+        <li>O - Owl (AI generated)</li>
+        <li>B - Book (AI generated)</li>
+        <li>B - Banana (AI generated)</li>
+        <li>Y - Yo-yo (AI generated)</li>
+        <li>Y - Yacht (AI generated)</li>
+        <li>U - Umbrella (AI generated)</li>
+        <li>N - Necklace (AI generated)</li>
+      </ul>
+    </section>
 
     <section>
       <h3>Notes</h3>
       <ul>
-        <li><strong>Help:</strong> None</li>
-        <li><strong>Challenges:</strong> None</li>
-        <li><strong>Statement:</strong> This is my own work and I did not copy and paste someone else’s code.</li>
-        <li><strong>Signed:</strong> Bobby Yun, 04/30/2025 03:47AM</li>
+        <li>AI tool used: Bing Image Creator</li>
+        <li>No external help received.</li>
+        <li>No major issues encountered during implementation.</li>
+        <li>This is my own original work and I did not copy/paste any code from others.</li>
       </ul>
+      <p>Signed, Bobby Yun, 04/30/2025 1:00 AM</p>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Bobby Yun | Built by Bobby.</p>
-  </footer>
 
   <script>
     const images = [
@@ -110,34 +97,24 @@
       { src: "images/necklace.jpg", caption: "N - Necklace" }
     ];
 
-    let currentIndex = 0;
+    let currentSlide = 0;
 
-    function updateSlide() {
-      $("#slideshow img").attr("src", images[currentIndex].src);
-      $("#slideshow img").attr("alt", images[currentIndex].caption);
-      $("#caption").text(images[currentIndex].caption);
+    function showSlide(index) {
+      const slide = slides[index];
+      document.getElementById('slide').src = slide.src;
+      document.getElementById('slide').alt = slide.caption;
+      document.getElementById('caption').textContent = slide.caption;
     }
 
-    $("#next").click(function () {
-      currentIndex = (currentIndex + 1) % images.length;
-      updateSlide();
-    });
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
 
-    $("#prev").click(function () {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      updateSlide();
-    });
-
-    // Gallery image click
-    $("#gallery img").click(function () {
-      const src = $(this).attr("src");
-      const index = images.findIndex(img => img.src === src);
-      if (index !== -1) {
-        currentIndex = index;
-        updateSlide();
-      }
-    });
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
   </script>
-
 </body>
 </html>
