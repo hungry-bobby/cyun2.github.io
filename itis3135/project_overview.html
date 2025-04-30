@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Project Overview – Charlotte Boxing Club Web App</title>
-  <link rel="stylesheet" href="styles/default.css">
-  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <title>Project Overview - Charlotte Boxing Club</title>
+  <link rel="stylesheet" href="styles/default.css" />
+  <style>
+    body {
+      background-color: #005035;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+
+    nav a:visited {
+      color: white;
+    }
+
+    nav a:hover {
+      color: #ddd;
+    }
+
+    main img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .section-title {
+      margin-top: 30px;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .site-section {
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 10px 20px;
+      text-align: left;
+    }
+
+    .site-section p {
+      margin: 8px 0;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    footer {
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+  </style>
 </head>
 <body>
-
-  <header>  
+  <header>
     <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
   </header>
 
@@ -19,7 +81,7 @@
       <li><a href="contract.html">Contract</a></li>
       <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
       <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
-      <li><a href="https://webpages.charlotte.edu/cyun2/itis3135/website_evaluations.html">Website Evaluation</a></li>
+      <li><a href="website_evaluations.html">Website Evaluation</a></li>
       <li><a href="https://webpages.charlotte.edu/cyun2/itis3135/tables.html">HTML Tables</a></li>
       <li><a href="BYOintro.html">BYO Intro</a></li>
       <li><a href="slideshow.html">Slideshow</a></li>
@@ -28,42 +90,50 @@
   </nav>
 
   <main>
-    <h2>Project Overview – Charlotte Boxing Club Web App</h2>
+    <img src="images/boxing.jpg" alt="Charlotte Boxing Club Banner" />
 
-    <img src="images/boxing.jpg" alt="Charlotte Boxing" width="300">
+    <h2 class="section-title">1. Project Overview</h2>
+    <div class="site-section">
+      <p><strong>Purpose:</strong> To create an interactive and informative website for the Charlotte Boxing Club, streamlining communications and recruitment.</p>
+      <p><strong>Intended Users:</strong> Current UNCC students interested in joining or learning about the boxing club.</p>
+      <p><strong>Content:</strong> Club info, schedule grid, leadership bios, equipment list, and sign-up forms.</p>
+    </div>
 
-    <h3>1. Project Overview</h3>
-    <p><strong>Purpose:</strong> To create an interactive and informative website for the Charlotte Boxing Club, streamlining communications and recruitment.</p>
-    <p><strong>Intended Users:</strong> Current UNCC students.</p>
-    <p><strong>Content:</strong> Club information, training schedules, leadership bios, equipment resources, and a signup form.</p>
+    <h2 class="section-title">2. Client Information</h2>
+    <div class="site-section">
+      <p><strong>Name:</strong> Charlotte Boxing Club</p>
+      <p><strong>Organization:</strong> Charlotte Boxing Club</p>
+      <p><strong>Email:</strong> CharlotteBoxing@Charlotte.edu</p>
+      <p><strong>Phone:</strong> 555-555-5555</p>
+    </div>
 
-    <h3>2. Client Information</h3>
-    <p><strong>Name:</strong> Charlotte Boxing Club</p>
-    <p><strong>Organization:</strong> Charlotte Boxing Club</p>
-    <p><strong>Email:</strong> CharlotteBoxing@Charlotte.edu</p>
-    <p><strong>Phone:</strong> 555-555-5555</p>
+    <h2 class="section-title">3. Wireframe</h2>
+    <div class="site-section">
+      <img src="images/boxing-wireframe.png" alt="Homepage wireframe for Charlotte Boxing Club" />
+      <p>Homepage wireframe – layout includes navbar, hero image, schedule grid, and footer.</p>
+    </div>
 
-    <h3>3. Wireframe</h3>
-    <img src="images/wireframe.jpg" alt="Homepage wireframe for Charlotte Boxing Club" width="500">
-    <p>Homepage wireframe – Layout includes navbar, logo, title, login button, and a large hero image with a welcome message.</p>
+    <h2 class="section-title">4. Site Map</h2>
+    <div class="site-section">
+      <img src="images/boxing-sitemap.png" alt="Site map for Charlotte Boxing Club" />
+      <p>Site Map – Six interconnected pages accessible via the navigation bar.</p>
+    </div>
 
-    <h3>4. Site Map</h3>
-    <img src="images/sitemap.jpg" alt="Site map for Charlotte Boxing Club" width="500">
-    <p>Site Map – Six interconnected pages accessible via the navigation bar. Each leads to a relevant section of the site.</p>
+    <h2 class="section-title">5. Website Pages</h2>
+    <div class="site-section">
+      <p><strong>Home:</strong> Reloads the homepage. Contains hero image and welcome message.</p>
+      <p><strong>About:</strong> Informative page describing the club's mission and background.</p>
+      <p><strong>Schedule:</strong> Displays training sessions and event details in a calendar-style layout.</p>
+      <p><strong>Leadership:</strong> Shows bios and photos of club leaders with hover interactivity.</p>
+      <p><strong>Equipment:</strong> Provides links and information on required boxing gear (gloves, headgear, etc.).</p>
+      <p><strong>Signup:</strong> New member registration form with validation and confirmation message.</p>
+    </div>
 
-    <h3>5. Website Pages</h3>
-    <ul>
-      <li><strong>Home:</strong> Reloads the homepage. Contains hero image and welcome message.</li>
-      <li><strong>About:</strong> Informative page describing the club's mission and background.</li>
-      <li><strong>Schedule:</strong> Displays training sessions and event details in a calendar-style layout.</li>
-      <li><strong>Leadership:</strong> Shows bios and photos of club leaders with hover interactivity.</li>
-      <li><strong>Equipment:</strong> Provides links and information on required boxing gear (gloves, headgear, etc.).</li>
-      <li><strong>Signup:</strong> New member registration form with validation and confirmation message.</li>
-    </ul>
-
-    <h3>6. Notes & Signature</h3>
-    <p><strong>Statement:</strong> I affirm this is my original work. No one else’s code was copied or pasted.</p>
-    <p><strong>Signed:</strong> Bobby Yun, 04/30/2025 2:05AM</p>
+    <h2 class="section-title">7. Notes & Signature</h2>
+    <div class="site-section">
+      <p><strong>Statement:</strong> I affirm this is my original work. No one else's code was copied or pasted.</p>
+      <p><strong>Signed:</strong> Bobby Yun, 04/30/2025 2:05AM</p>
+    </div>
   </main>
 
   <footer>
@@ -79,6 +149,5 @@
       <a id="validation_link_css">CSS Validation</a>
     </p>
   </footer>
-
 </body>
 </html>
