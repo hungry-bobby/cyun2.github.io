@@ -4,120 +4,148 @@
   <meta charset="UTF-8">
   <title>HTML Tables - Bobby Yun</title>
   <link rel="stylesheet" href="styles/default.css">
-  <script src="scripts/HTMLInclude.js"></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div data-include="components/header.html"></div>
+  <header>
+    <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
+    <nav>
+      <ul>
+        <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="contract.html">Contract</a></li>
+        <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
+        <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
+        <li><a href="website_evaluations.html">Website Evaluation</a></li>
+        <li><a href="tables.html">HTML Tables</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <p><em>Disclaimer: The names used in this assignment are fictional and based on characters from the video game <strong>Valorant</strong>. This is for educational purposes only.</em></p>
+  <main>
+    <p><em>Disclaimer: The names used in this assignment are fictional and based on characters from the video game <strong>Valorant</strong>. This is for educational purposes only.</em></p>
 
-  <h2>HTML Tables Assignment</h2>
+    <h2>HTML Tables Assignment</h2>
 
-  <h3>My Tabular Data</h3>
-  <div style="display: flex; justify-content: center;">
-    <ol style="text-align: left;">
-      <li>Jett - jett@valorant.com - 3</li>
-      <li>Phoenix - phoenix@valorant.com - 5</li>
-      <li>Sage - sage@valorant.com - 8</li>
-      <li>Omen - omen@valorant.com - 6</li>
-      <li>Brimstone - brimstone@valorant.com - 10</li>
-      <li>Killjoy - killjoy@valorant.com - 4</li>
-      <li>Raze - raze@valorant.com - 2</li>
-      <li>Viper - viper@valorant.com - 7</li>
-    </ol>
-  </div>
-  
+    <h3>My Tabular Data</h3>
+    <div style="display: flex; justify-content: center;">
+      <ol style="text-align: left;">
+        <li>Jett - jett@valorant.com - 3</li>
+        <li>Phoenix - phoenix@valorant.com - 5</li>
+        <li>Sage - sage@valorant.com - 8</li>
+        <li>Omen - omen@valorant.com - 6</li>
+        <li>Brimstone - brimstone@valorant.com - 10</li>
+        <li>Killjoy - killjoy@valorant.com - 4</li>
+        <li>Raze - raze@valorant.com - 2</li>
+        <li>Viper - viper@valorant.com - 7</li>
+      </ol>
+    </div>
 
-  <h3>Employee Data in Simple Table</h3>
-  <div style="display: flex; justify-content: center;">
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Years of Service</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Jett</td><td>jett@valorant.com</td><td>3</td></tr>
-        <tr><td>Phoenix</td><td>phoenix@valorant.com</td><td>5</td></tr>
-        <tr><td>Sage</td><td>sage@valorant.com</td><td>8</td></tr>
-        <tr><td>Omen</td><td>omen@valorant.com</td><td>6</td></tr>
-        <tr><td>Brimstone</td><td>brimstone@valorant.com</td><td>10</td></tr>
-        <tr><td>Killjoy</td><td>killjoy@valorant.com</td><td>4</td></tr>
-        <tr><td>Raze</td><td>raze@valorant.com</td><td>2</td></tr>
-        <tr><td>Viper</td><td>viper@valorant.com</td><td>7</td></tr>
-      </tbody>
-    </table>
-  </div>
+    <h3>Employee Data in Simple Table</h3>
+    <div style="display: flex; justify-content: center;">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Years of Service</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Jett</td><td>jett@valorant.com</td><td>3</td></tr>
+          <tr><td>Phoenix</td><td>phoenix@valorant.com</td><td>5</td></tr>
+          <tr><td>Sage</td><td>sage@valorant.com</td><td>8</td></tr>
+          <tr><td>Omen</td><td>omen@valorant.com</td><td>6</td></tr>
+          <tr><td>Brimstone</td><td>brimstone@valorant.com</td><td>10</td></tr>
+          <tr><td>Killjoy</td><td>killjoy@valorant.com</td><td>4</td></tr>
+          <tr><td>Raze</td><td>raze@valorant.com</td><td>2</td></tr>
+          <tr><td>Viper</td><td>viper@valorant.com</td><td>7</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-  <h3>Employee Data in Complex Table</h3>
-  <figure style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <figcaption>Employee Information</figcaption>
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Salary ($)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td rowspan="2">Controllers</td>
-          <td>Omen</td>
-          <td>omen@valorant.com</td>
-          <td>75,000</td>
-        </tr>
-        <tr>
-          <td>Viper</td>
-          <td>viper@valorant.com</td>
-          <td>68,000</td>
-        </tr>
-        <tr>
-          <td rowspan="3">Duelists</td>
-          <td>Jett</td>
-          <td>jett@valorant.com</td>
-          <td>65,000</td>
-        </tr>
-        <tr>
-          <td>Phoenix</td>
-          <td>phoenix@valorant.com</td>
-          <td>60,000</td>
-        </tr>
-        <tr>
-          <td>Raze</td>
-          <td>raze@valorant.com</td>
-          <td>62,000</td>
-        </tr>
-        <tr>
-          <td rowspan="2">Sentinels</td>
-          <td>Sage</td>
-          <td>sage@valorant.com</td>
-          <td>70,000</td>
-        </tr>
-        <tr>
-          <td>Killjoy</td>
-          <td>killjoy@valorant.com</td>
-          <td>66,000</td>
-        </tr>
-        <tr>
-          <td colspan="3"><strong>Total Years of Service</strong></td>
-          <td>45</td>
-        </tr>
-        <tr>
-          <td colspan="3"><strong>Total Annual Salary Budget</strong></td>
-          <td>$466,000</td>
-        </tr>
-      </tbody>
-    </table>
-  </figure>
-</main>
+    <h3>Employee Data in Complex Table</h3>
+    <figure style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+      <figcaption>Employee Information</figcaption>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary ($)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">Controllers</td>
+            <td>Omen</td>
+            <td>omen@valorant.com</td>
+            <td>75,000</td>
+          </tr>
+          <tr>
+            <td>Viper</td>
+            <td>viper@valorant.com</td>
+            <td>68,000</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Duelists</td>
+            <td>Jett</td>
+            <td>jett@valorant.com</td>
+            <td>65,000</td>
+          </tr>
+          <tr>
+            <td>Phoenix</td>
+            <td>phoenix@valorant.com</td>
+            <td>60,000</td>
+          </tr>
+          <tr>
+            <td>Raze</td>
+            <td>raze@valorant.com</td>
+            <td>62,000</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Sentinels</td>
+            <td>Sage</td>
+            <td>sage@valorant.com</td>
+            <td>70,000</td>
+          </tr>
+          <tr>
+            <td>Killjoy</td>
+            <td>killjoy@valorant.com</td>
+            <td>66,000</td>
+          </tr>
+          <tr>
+            <td colspan="3"><strong>Total Years of Service</strong></td>
+            <td>45</td>
+          </tr>
+          <tr>
+            <td colspan="3"><strong>Total Annual Salary Budget</strong></td>
+            <td>$466,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </main>
 
-<div data-include="components/footer.html"></div>
+  <footer>
+    <ul>
+      <li><a href="https://webpages.charlotte.edu/cyun2/">CLT Web</a></li>
+      <li><a href="https://github.com/hungry-bobby">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a></li>
+    </ul>
+    <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank" rel="noopener noreferrer">BobbyBuiltIt.co</a></p>
+    <p><em>“Built By Bobby.”</em></p>
+    <p>
+      <a id="validation_link_html" href="#">HTML Validation</a> |
+      <a id="validation_link_css" href="#">CSS Validation</a>
+    </p>
+    <script>
+      document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+      document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+  </footer>
 
 </body>
 </html>
