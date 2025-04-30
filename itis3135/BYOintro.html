@@ -1,73 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>BYO Intro - Bobby Yun</title>
-  <link rel="stylesheet" href="styles/default.css">
-  <script defer src="scripts/survey.js"></script>
+  <meta charset="UTF-8" />
+  <title>BYO Introduction</title>
+  <link rel="stylesheet" href="styles/default.css" />
+  <script src="scripts/survey.js" defer></script>
 </head>
 <body>
+  <header>
+    <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
+  </header>
 
-<header>
-  <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
-</header>
+  <nav>
+    <ul>
+      <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="contract.html">Contract</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
+      <li><a href="website_evaluations.html">Website Evaluation</a></li>
+      <li><a href="tables.html">HTML Tables</a></li>
+      <li><a href="byo_intro.html">BYO Intro</a></li>
+    </ul>
+  </nav>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="introduction.html">Introduction</a></li>
-    <li><a href="contract.html">Contract</a></li>
-    <li><a href="website_evaluations.html">Website Evaluation</a></li>
-    <li><a href="tables.html">HTML Tables</a></li>
-    <li><a href="byo_intro.html">BYO Intro</a></li>
-  </ul>
-</nav>
+  <main>
+    <h2>BYO Introduction</h2>
+    <p>Time to build your own Intro page, please fill out the form below so we can create your own page.</p>
 
-<main>
-  <h2>Time to BYO Intro page</h2>
-  <p>Please fill out the form below so we can create your own page.</p>
+    <form id="introForm">
+      <fieldset>
+        <legend>Basic Information</legend>
+        <label>First Name: <input type="text" name="firstName" required /></label>
+        <label>Middle Initial: <input type="text" name="middleInit" required /></label>
+        <label>Last Name: <input type="text" name="lastName" required /></label>
+        <label>Nickname: <input type="text" name="nickname" placeholder="e.g. Killer Queen" required /></label>
+        <label>Mascot: <input type="text" name="mascot" required /></label>
+      </fieldset>
 
-  <form id="introForm">
-    <label>Name: <input type="text" name="name" required></label><br>
-    <label>Mascot: <input type="text" name="mascot" required></label><br>
-    <label>Image: <input type="file" name="image" accept=".png,.jpg" required></label><br>
-    <label>Image Caption: <input type="text" name="caption" required></label><br>
-    <label>Personal Background: <input type="text" name="personal" required></label><br>
-    <label>Professional Background: <input type="text" name="professional" required></label><br>
-    <label>Academic Background: <input type="text" name="academic" required></label><br>
-    <label>Background in Web Development: <input type="text" name="webdev" required></label><br>
-    <label>Primary Computer Platform: <input type="text" name="platform" required></label><br>
+      <fieldset>
+        <legend>Image Upload</legend>
+        <label>Upload Image: <input type="file" name="img" accept="image/png, image/jpeg" required /></label>
+        <label>Image Alt: <input type="text" name="imgAlt" required /></label>
+        <label>Image Caption: <input type="text" name="imgCaption" required /></label>
+      </fieldset>
 
-    <fieldset>
-      <legend>Courses currently taking:</legend>
-      <div id="courseList">
-        <input type="text" name="course0" class="course"><button type="button" onclick="deleteCourse(this)">Delete</button>
+      <fieldset>
+        <legend>Background</legend>
+        <label>Personal Background: <input type="text" name="personalBackground" required /></label>
+        <label>Professional Background: <input type="text" name="professionalBackground" required /></label>
+        <label>Academic Background: <input type="text" name="academicBackground" required /></label>
+        <label>Background in Web Development: <input type="text" name="webBackground" required /></label>
+        <label>Primary Computer Platform: <input type="text" name="platform" required /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Courses I'm Taking & Why</legend>
+        <div id="courses">
+          <div class="course">
+            <input type="text" name="course[]" placeholder="Course Code" required />
+            <input type="text" name="courseDesc[]" placeholder="Course Description" required />
+            <input type="text" name="courseType[]" placeholder="Reason" required />
+            <button type="button" onclick="removeCourse(this)">Delete Course</button>
+          </div>
+        </div>
+        <button type="button" onclick="addCourse()">Add Course</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Fun Stuff</legend>
+        <label>Funny thing? <input type="text" name="funnyThing" /></label>
+        <label>Anything else? <input type="text" name="anythingElse" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Consent</legend>
+        <label>
+          <input type="checkbox" required />
+          "I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."
+        </label>
+      </fieldset>
+
+      <div style="margin-top: 20px;">
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
       </div>
-      <button type="button" onclick="addCourse()">Add Course</button>
-    </fieldset>
+    </form>
+  </main>
 
-    <label>Funny thing?: <input type="text" name="funny"></label><br>
-    <label>Anything else?: <input type="text" name="extra"></label><br>
-    <label><input type="checkbox" name="agree" required> I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br>
-
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-  </form>
-</main>
-
-<footer>
-  <ul>
-    <li><a href="https://webpages.charlotte.edu/cyun2/">CLT Web</a></li>
-    <li><a href="https://github.com/hungry-bobby">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a></li>
-  </ul>
-  <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/">BobbyBuiltIt.co</a></p>
-  <p><em>“Built By Bobby.”</em></p>
-  <p>
-    <a id="validation_link_html">HTML Validation</a> |
-    <a id="validation_link_css">CSS Validation</a>
-  </p>
-</footer>
-
+  <footer>
+    <ul>
+      <li><a href="https://webpages.charlotte.edu/cyun2/">CLT Web</a></li>
+      <li><a href="https://github.com/hungry-bobby">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a></li>
+    </ul>
+    <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank">BobbyBuiltIt.co</a></p>
+    <p><em>“Built By Bobby.”</em></p>
+    <p>
+      <a id="validation_link_html">HTML Validation</a> |
+      <a id="validation_link_css">CSS Validation</a>
+    </p>
+  </footer>
 </body>
 </html>
