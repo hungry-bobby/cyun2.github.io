@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bobby Yun Slideshow</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <style>
+    body {
+      background-color: #00FFFF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #slideshow-container {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    #slideshow img {
+      width: 100%;
+      height: auto;
+    }
+    #gallery img {
+      width: 100px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    ul {
+      text-align: left;
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="contract.html">Contract</a></li>
+      <li><a href="website_evaluations.html">Website Evaluation</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="slideshow.html">Slideshow</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Bobby Yun Image Slideshow</h2>
+
+    <div id="slideshow-container">
+      <div id="slideshow">
+        <img src="images/banana.jpg" alt="Banana">
+        <p id="caption">B - Banana</p>
+      </div>
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+
+    <h3>Image List</h3>
+    <ul>
+      <li>B - Banana</li>
+      <li>O - Octopus</li>
+      <li>B - Book</li>
+      <li>B - Basketball</li>
+      <li>Y - Yo-yo</li>
+      <li>Y - Yak</li>
+      <li>U - Umbrella</li>
+      <li>N - Necklace</li>
+    </ul>
+
+    <div id="gallery">
+      <img src="images/banana.jpg" alt="B - Banana">
+      <img src="images/octopus.jpg" alt="O - Octopus">
+      <img src="images/book.jpg" alt="B - Book">
+      <img src="images/basketball.jpg" alt="B - Basketball">
+      <img src="images/yoyo.jpg" alt="Y - Yo-yo">
+      <img src="images/yak.jpg" alt="Y - Yak">
+      <img src="images/umbrella.jpg" alt="U - Umbrella">
+      <img src="images/necklace.jpg" alt="N - Necklace">
+    </div>
+
+    <section>
+      <h3>Notes</h3>
+      <ul>
+        <li><strong>Help:</strong> None</li>
+        <li><strong>Challenges:</strong> None</li>
+        <li><strong>Statement:</strong> This is my own work and I did not copy and paste someone else’s code.</li>
+        <li><strong>Signed:</strong> Bobby Yun, 04/30/2025 03:47AM</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bobby Yun | Built by Bobby.</p>
+  </footer>
+
+  <script>
+    const images = [
+      { src: "images/banana.jpg", caption: "B - Banana" },
+      { src: "images/octopus.jpg", caption: "O - Octopus" },
+      { src: "images/book.jpg", caption: "B - Book" },
+      { src: "images/basketball.jpg", caption: "B - Basketball" },
+      { src: "images/yoyo.jpg", caption: "Y - Yo-yo" },
+      { src: "images/yak.jpg", caption: "Y - Yak" },
+      { src: "images/umbrella.jpg", caption: "U - Umbrella" },
+      { src: "images/necklace.jpg", caption: "N - Necklace" }
+    ];
+
+    let currentIndex = 0;
+
+    function updateSlide() {
+      $("#slideshow img").attr("src", images[currentIndex].src);
+      $("#slideshow img").attr("alt", images[currentIndex].caption);
+      $("#caption").text(images[currentIndex].caption);
+    }
+
+    $("#next").click(function () {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateSlide();
+    });
+
+    $("#prev").click(function () {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateSlide();
+    });
+
+    // Gallery image click
+    $("#gallery img").click(function () {
+      const src = $(this).attr("src");
+      const index = images.findIndex(img => img.src === src);
+      if (index !== -1) {
+        currentIndex = index;
+        updateSlide();
+      }
+    });
+  </script>
+
+</body>
+</html>
