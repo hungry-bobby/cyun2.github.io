@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>HTML Tables - Bobby Yun</title>
-  <link rel="stylesheet" href="styles/default.css">
-  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/default.css" />
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 12px;
+    }
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
-    <nav>
-      <ul>
-        <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
-        <li><a href="introduction.html">Introduction</a></li>
-        <li><a href="contract.html">Contract</a></li>
-        <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
-        <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
-        <li><a href="website_evaluations.html">Website Evaluation</a></li>
-        <li><a href="tables.html">HTML Tables</a></li>
-      </ul>
-    </nav>
   </header>
+
+  <nav>
+    <ul>
+      <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="contract.html">Contract</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
+      <li><a href="website_evaluations.html">Website Evaluation</a></li>
+      <li><a href="tables.html">HTML Tables</a></li>
+    </ul>
+  </nav>
 
   <main>
     <p><em>Disclaimer: The names used in this assignment are fictional and based on characters from the video game <strong>Valorant</strong>. This is for educational purposes only.</em></p>
@@ -43,32 +58,30 @@
     </div>
 
     <h3>Employee Data in Simple Table</h3>
-    <div style="display: flex; justify-content: center;">
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Years of Service</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Jett</td><td>jett@valorant.com</td><td>3</td></tr>
-          <tr><td>Phoenix</td><td>phoenix@valorant.com</td><td>5</td></tr>
-          <tr><td>Sage</td><td>sage@valorant.com</td><td>8</td></tr>
-          <tr><td>Omen</td><td>omen@valorant.com</td><td>6</td></tr>
-          <tr><td>Brimstone</td><td>brimstone@valorant.com</td><td>10</td></tr>
-          <tr><td>Killjoy</td><td>killjoy@valorant.com</td><td>4</td></tr>
-          <tr><td>Raze</td><td>raze@valorant.com</td><td>2</td></tr>
-          <tr><td>Viper</td><td>viper@valorant.com</td><td>7</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Years of Service</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jett</td><td>jett@valorant.com</td><td>3</td></tr>
+        <tr><td>Phoenix</td><td>phoenix@valorant.com</td><td>5</td></tr>
+        <tr><td>Sage</td><td>sage@valorant.com</td><td>8</td></tr>
+        <tr><td>Omen</td><td>omen@valorant.com</td><td>6</td></tr>
+        <tr><td>Brimstone</td><td>brimstone@valorant.com</td><td>10</td></tr>
+        <tr><td>Killjoy</td><td>killjoy@valorant.com</td><td>4</td></tr>
+        <tr><td>Raze</td><td>raze@valorant.com</td><td>2</td></tr>
+        <tr><td>Viper</td><td>viper@valorant.com</td><td>7</td></tr>
+      </tbody>
+    </table>
 
     <h3>Employee Data in Complex Table</h3>
-    <figure style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <figure>
       <figcaption>Employee Information</figcaption>
-      <table border="1">
+      <table>
         <thead>
           <tr>
             <th>Category</th>
@@ -138,13 +151,9 @@
     <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank" rel="noopener noreferrer">BobbyBuiltIt.co</a></p>
     <p><em>“Built By Bobby.”</em></p>
     <p>
-      <a id="validation_link_html" href="#">HTML Validation</a> |
-      <a id="validation_link_css" href="#">CSS Validation</a>
+      <a id="validation_link_html" href="https://validator.w3.org/check?uri=referer">HTML Validation</a> |
+      <a id="validation_link_css" href="https://jigsaw.w3.org/css-validator/validator?uri=referer">CSS Validation</a>
     </p>
-    <script>
-      document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-      document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    </script>
   </footer>
 
 </body>

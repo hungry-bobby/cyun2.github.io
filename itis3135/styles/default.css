@@ -23,23 +23,19 @@ nav ul li, footer ul li {
   margin-right: 15px;
 }
 
-/* Layout Foundation for All Screens */
 main {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* MEDIA QUERIES */
 
-/* Tablet Devices (601px–980px) */
 @media screen and (min-width: 601px) and (max-width: 980px) {
   body {
-    background-color: #e0f7fa; /* subtle change if you want */
+    background-color: #e0f7fa;
   }
 }
 
-/* Mobile Devices (370px–600px) */
 @media screen and (min-width: 370px) and (max-width: 600px) {
   body {
     background-color: #ccf5f5; /* another slight variation */
@@ -50,4 +46,14 @@ main {
     display: block;
     margin: 8px 0;
   }
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
 }
