@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Tables - Bobby Yun</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="scripts/HTMLInclude.js"></script>
+</head>
+<body>
+
+<div data-include="components/header.html"></div>
+
+<main>
+  <h2>HTML Tables Assignment</h2>
+
+  <h3>My Tabular Data</h3>
+  <ol>
+    <li>Jett - jett@valorant.com - 3</li>
+    <li>Phoenix - phoenix@valorant.com - 5</li>
+    <li>Sage - sage@valorant.com - 8</li>
+    <li>Omen - omen@valorant.com - 6</li>
+    <li>Brimstone - brimstone@valorant.com - 10</li>
+    <li>Killjoy - killjoy@valorant.com - 4</li>
+    <li>Raze - raze@valorant.com - 2</li>
+    <li>Viper - viper@valorant.com - 7</li>
+  </ol>
+
+  <h3>Employee Data in Simple Table</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Years of Service</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Jett</td><td>jett@valorant.com</td><td>3</td></tr>
+      <tr><td>Phoenix</td><td>phoenix@valorant.com</td><td>5</td></tr>
+      <tr><td>Sage</td><td>sage@valorant.com</td><td>8</td></tr>
+      <tr><td>Omen</td><td>omen@valorant.com</td><td>6</td></tr>
+      <tr><td>Brimstone</td><td>brimstone@valorant.com</td><td>10</td></tr>
+      <tr><td>Killjoy</td><td>killjoy@valorant.com</td><td>4</td></tr>
+      <tr><td>Raze</td><td>raze@valorant.com</td><td>2</td></tr>
+      <tr><td>Viper</td><td>viper@valorant.com</td><td>7</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Employee Data in Complex Table</h3>
+  <figure>
+    <figcaption>Employee Information</figcaption>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Salary ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">Controllers</td>
+          <td>Omen</td>
+          <td>omen@valorant.com</td>
+          <td>75,000</td>
+        </tr>
+        <tr>
+          <td>Viper</td>
+          <td>viper@valorant.com</td>
+          <td>68,000</td>
+        </tr>
+        <tr>
+          <td rowspan="3">Duelists</td>
+          <td>Jett</td>
+          <td>jett@valorant.com</td>
+          <td>65,000</td>
+        </tr>
+        <tr>
+          <td>Phoenix</td>
+          <td>phoenix@valorant.com</td>
+          <td>60,000</td>
+        </tr>
+        <tr>
+          <td>Raze</td>
+          <td>raze@valorant.com</td>
+          <td>62,000</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Sentinels</td>
+          <td>Sage</td>
+          <td>sage@valorant.com</td>
+          <td>70,000</td>
+        </tr>
+        <tr>
+          <td>Killjoy</td>
+          <td>killjoy@valorant.com</td>
+          <td>66,000</td>
+        </tr>
+        <tr>
+          <td colspan="3"><strong>Total Years of Service</strong></td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td colspan="3"><strong>Total Annual Salary Budget</strong></td>
+          <td>$466,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+</main>
+
+<div data-include="components/footer.html"></div>
+
+</body>
+</html>
