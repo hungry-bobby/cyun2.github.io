@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bobby Yun's Slideshow</title>
+  <title>Bobby Yun's Alphabet Slideshow</title>
   <link rel="stylesheet" href="styles/default.css" />
   <style>
     body {
@@ -39,16 +39,47 @@
       margin: 40px auto;
       max-width: 600px;
     }
+
+    nav ul, footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    nav ul li, footer ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    footer {
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Bobby Yun's Alphabet Slideshow</h1>
-    <p>Each image corresponds to a letter in my full name: BOBBY YUN</p>
+    <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
   </header>
+  
+  <nav>
+    <ul>
+      <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="contract.html">Contract</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
+      <li><a href="website_evaluations.html">Website Evaluation</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/itis3135/tables.html">HTML Tables</a></li>
+      <li><a href="BYOintro.html">BYO Intro</a></li>
+      <li><a href="slideshow.html">Slideshow</a></li>
+    </ul>
+  </nav>
 
   <main>
+    <h2>Bobby Yun's Alphabet Slideshow</h2>
+    <p>Each image corresponds to a letter in my full name: BOBBY YUN</p>
+
     <div class="slideshow-container">
       <img id="slide" class="slide" src="images/banana.jpg" alt="B - Banana" />
       <div class="caption" id="caption">B - Banana</div>
@@ -60,7 +91,7 @@
     </div>
 
     <section>
-      <h2>Image References</h2>
+      <h3>Image References</h3>
       <ul class="references">
         <li>B - Banana</li>
         <li>O - Octopus</li>
@@ -76,13 +107,27 @@
     <section>
       <h3>Notes</h3>
       <ul>
-        <li>All images were from Google images</li>
+        <li>All images were AI-generated using Bing Image Creator</li>
         <li>No external help received; completed independently</li>
-        <li>This is entirely my own work and did not copy any other student's code</li>
+        <li>This is entirely my own work and does not copy any other student's code</li>
       </ul>
       <p>Signed, Bobby Yun, 04/30/2025 1:42 AM</p>
     </section>
   </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://webpages.charlotte.edu/cyun2/">CLT Web</a></li>
+      <li><a href="https://github.com/hungry-bobby">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a></li>
+    </ul>
+    <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank" rel="noopener noreferrer">BobbyBuiltIt.co</a></p>
+    <p><em>“Built By Bobby.”</em></p>
+    <p>
+      <a id="validation_link_html">HTML Validation</a> |
+      <a id="validation_link_css">CSS Validation</a>
+    </p>
+  </footer>
 
   <script>
     const images = [
@@ -114,6 +159,9 @@
       current = (current - 1 + images.length) % images.length;
       showSlide(current);
     }
+
+    // Initialize first slide
+    showSlide(current);
   </script>
 
 </body>
