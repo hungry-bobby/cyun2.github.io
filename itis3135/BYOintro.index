@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BYO Intro - Bobby Yun</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script defer src="scripts/survey.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+    <li><a href="contract.html">Contract</a></li>
+    <li><a href="website_evaluations.html">Website Evaluation</a></li>
+    <li><a href="tables.html">HTML Tables</a></li>
+    <li><a href="byo_intro.html">BYO Intro</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h2>Time to BYO Intro page</h2>
+  <p>Please fill out the form below so we can create your own page.</p>
+
+  <form id="introForm">
+    <label>Name: <input type="text" name="name" required></label><br>
+    <label>Mascot: <input type="text" name="mascot" required></label><br>
+    <label>Image: <input type="file" name="image" accept=".png,.jpg" required></label><br>
+    <label>Image Caption: <input type="text" name="caption" required></label><br>
+    <label>Personal Background: <input type="text" name="personal" required></label><br>
+    <label>Professional Background: <input type="text" name="professional" required></label><br>
+    <label>Academic Background: <input type="text" name="academic" required></label><br>
+    <label>Background in Web Development: <input type="text" name="webdev" required></label><br>
+    <label>Primary Computer Platform: <input type="text" name="platform" required></label><br>
+
+    <fieldset>
+      <legend>Courses currently taking:</legend>
+      <div id="courseList">
+        <input type="text" name="course0" class="course"><button type="button" onclick="deleteCourse(this)">Delete</button>
+      </div>
+      <button type="button" onclick="addCourse()">Add Course</button>
+    </fieldset>
+
+    <label>Funny thing?: <input type="text" name="funny"></label><br>
+    <label>Anything else?: <input type="text" name="extra"></label><br>
+    <label><input type="checkbox" name="agree" required> I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+</main>
+
+<footer>
+  <ul>
+    <li><a href="https://webpages.charlotte.edu/cyun2/">CLT Web</a></li>
+    <li><a href="https://github.com/hungry-bobby">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a></li>
+  </ul>
+  <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/">BobbyBuiltIt.co</a></p>
+  <p><em>“Built By Bobby.”</em></p>
+  <p>
+    <a id="validation_link_html">HTML Validation</a> |
+    <a id="validation_link_css">CSS Validation</a>
+  </p>
+</footer>
+
+</body>
+</html>
