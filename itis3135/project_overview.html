@@ -10,38 +10,56 @@
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
-    }
-    nav ul {
-      list-style: none;
+      margin: 0;
       padding: 0;
     }
-    nav ul li {
-      display: inline;
-      margin-right: 15px;
+
+    nav ul, footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    nav ul li a {
+
+    nav ul li, footer ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a,
+    footer ul li a,
+    footer a {
       color: white;
       text-decoration: underline;
     }
-    footer ul {
-      list-style: none;
-      padding: 0;
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
     }
-    footer ul li {
-      display: inline;
-      margin-right: 15px;
-    }
+
     section {
-      margin: 30px auto;
-      max-width: 800px;
-      text-align: left;
+      margin: 40px 0;
     }
-    h2, h3, h4 {
+
+    section ul {
+      padding-left: 0;
+    }
+
+    section ul li {
+      list-style-position: inside;
+      margin: 5px 0;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h2, h3, h4, p {
       text-align: center;
-      font-family: 'Courier New', monospace;
-    }
-    ul li {
-      text-align: left;
     }
   </style>
 </head>
@@ -204,4 +222,8 @@
       <li><a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a></li>
     </ul>
     <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank">BobbyBuiltIt.co</a></p>
-    <p><em>“Built By Bobby.”</
+    <p><em>“Built By Bobby.”</em></p>
+  </footer>
+
+</body>
+</html>
