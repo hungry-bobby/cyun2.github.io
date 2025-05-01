@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Project Overview - Charlotte Boxing Club</title>
-  <link rel="stylesheet" href="styles/default.css" />
+  <meta charset="UTF-8">
+  <title>Project Overview – Charlotte Boxing Club Web App</title>
+  <link rel="stylesheet" href="styles/default.css">
   <style>
     body {
       background-color: #005035;
@@ -11,129 +11,190 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
-
-    nav a {
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+    nav ul li a {
       color: white;
       text-decoration: underline;
-      margin: 0 10px;
     }
-
-    nav a:visited {
-      color: white;
-    }
-
-    nav a:hover {
-      color: #ddd;
-    }
-
-    main img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .section-title {
-      margin-top: 30px;
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-
-    .site-section {
-      margin: 0 auto;
-      max-width: 800px;
-      padding: 10px 20px;
-      text-align: left;
-    }
-
-    .site-section p {
-      margin: 8px 0;
-    }
-
     footer ul {
       list-style: none;
       padding: 0;
     }
-
     footer ul li {
       display: inline;
       margin-right: 15px;
     }
-
-    footer a {
-      color: white;
+    section {
+      margin: 30px auto;
+      max-width: 800px;
+      text-align: left;
     }
-
-    footer {
-      margin-top: 40px;
-      border-top: 1px solid #ccc;
-      padding-top: 15px;
+    h2, h3, h4 {
+      text-align: center;
+      font-family: 'Courier New', monospace;
+    }
+    ul li {
+      text-align: left;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
   </header>
 
   <nav>
     <ul>
-        <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
-        <li><a href="introduction.html">Introduction</a></li>
-        <li><a href="contract.html">Contract</a></li>
-        <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
-        <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
-        <li><a href="website_evaluations.html">Website Evaluation</a></li>
-        <li><a href="https://webpages.charlotte.edu/cyun2/itis3135/tables.html">HTML Tables</a></li>
-        <li><a href="BYOintro.html">BYO Intro</a></li>
-        <li><a href="slideshow.html">Slideshow</a></li>
-        <li><a href="drawing.html">Drawing</a></li>
-        <li><a href="project_overview.html">Project Overview</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="contract.html">Contract</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
+      <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
+      <li><a href="website_evaluations.html">Website Evaluation</a></li>
+      <li><a href="tables.html">HTML Tables</a></li>
+      <li><a href="BYOintro.html">BYO Intro</a></li>
+      <li><a href="slideshow.html">Slideshow</a></li>
+      <li><a href="drawing.html">Drawing</a></li>
+    </ul>
   </nav>
 
   <main>
-    <img src="images/boxing.jpg" alt="Charlotte Boxing Club Banner" />
+    <h2>Project Overview – Charlotte Boxing Club Web App</h2>
 
-    <h2 class="section-title">1. Project Overview</h2>
-    <div class="site-section">
-      <p><strong>Purpose:</strong> To create an interactive and informative website for the Charlotte Boxing Club, streamlining communications and recruitment.</p>
-      <p><strong>Intended Users:</strong> Current UNCC students interested in joining or learning about the boxing club.</p>
-      <p><strong>Content:</strong> Club info, schedule grid, leadership bios, equipment list, and sign-up forms.</p>
-    </div>
+    <img src="images/boxing.jpg" alt="Charlotte Boxing" width="600">
 
-    <h2 class="section-title">2. Client Information</h2>
-    <div class="site-section">
-      <p><strong>Name:</strong> Charlotte Boxing Club</p>
-      <p><strong>Organization:</strong> Charlotte Boxing Club</p>
-      <p><strong>Email:</strong> CharlotteBoxing@Charlotte.edu</p>
-      <p><strong>Phone:</strong> 555-555-5555</p>
-    </div>
+    <section>
+      <h3>1. Project Overview</h3>
+      <ul>
+        <li><strong>Purpose:</strong> To create an interactive and informative website for the Charlotte Boxing Club, streamlining communications and recruitment.</li>
+        <li><strong>Intended Users:</strong> Current UNCC students.</li>
+        <li><strong>Content:</strong> Club info, training schedule, leadership bios, equipment list, and signup form.</li>
+      </ul>
+    </section>
 
-    <h2 class="section-title">3. Wireframe</h2>
-    <div class="site-section">
-      <img src="images/wireframe.jpg" alt="Homepage wireframe for Charlotte Boxing Club" />
+    <section>
+      <h3>2. Client Information</h3>
+      <ul>
+        <li><strong>Name:</strong> Charlotte Boxing Club</li>
+        <li><strong>Organization:</strong> Charlotte Boxing Club</li>
+        <li><strong>Email:</strong> CharlotteBoxing@Charlotte.edu</li>
+        <li><strong>Phone:</strong> 555-555-5555</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>3. Wireframe</h3>
+      <img src="images/wireframe.jpg" alt="Homepage wireframe for Charlotte Boxing Club" width="600">
       <p>Homepage wireframe – layout includes navbar, hero image, schedule grid, and footer.</p>
-    </div>
+    </section>
 
-    <h2 class="section-title">4. Site Map</h2>
-    <div class="site-section">
-      <img src="images/sitemap.jpg" alt="Site map for Charlotte Boxing Club" />
+    <section>
+      <h3>4. Site Map</h3>
+      <img src="images/sitemap.jpg" alt="Site map for Charlotte Boxing Club" width="600">
       <p>Site Map – Six interconnected pages accessible via the navigation bar.</p>
-    </div>
+    </section>
 
-    <h2 class="section-title">5. Website Pages</h2>
-    <div class="site-section">
-      <p><strong>Home:</strong> Reloads the homepage. Contains hero image and welcome message.</p>
-      <p><strong>About:</strong> Informative page describing the club's mission and background.</p>
-      <p><strong>Schedule:</strong> Displays training sessions and event details in a calendar-style layout.</p>
-      <p><strong>Leadership:</strong> Shows bios and photos of club leaders with hover interactivity.</p>
-      <p><strong>Equipment:</strong> Provides links and information on required boxing gear (gloves, headgear, etc.).</p>
-      <p><strong>Signup:</strong> New member registration form with validation and confirmation message.</p>
-    </div>
+    <section>
+      <h3>5. Website Pages</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><strong>Home:</strong> Reloads the homepage. Contains hero image and welcome message.</li>
+        <li><strong>About:</strong> Informative page describing the club’s mission and background.</li>
+        <li><strong>Schedule:</strong> Displays training sessions and event details in a calendar-style layout.</li>
+        <li><strong>Leadership:</strong> Shows bios and photos of club leaders with hover interactivity.</li>
+        <li><strong>Equipment:</strong> Provides links and information on required boxing gear (gloves, headgear, etc.).</li>
+        <li><strong>Signup:</strong> New member registration form with validation and confirmation message.</li>
+      </ul>
+    </section>
 
-    <h2 class="section-title">7. Notes & Signature</h2>
-    <div class="site-section">
+    <section>
+      <h3>6. Page Design</h3>
+
+      <h4>Home</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Reloads the homepage.</li>
+        <li><strong>Audience:</strong> All site visitors, new and returning students.</li>
+        <li><strong>Content:</strong> Charlotte Boxing image, welcome message, navbar, and footer.</li>
+        <li><strong>Form Input:</strong> No</li>
+        <li><strong>Validations:</strong> No</li>
+        <li><strong>Buttons/Links:</strong> Navigation links in header/footer</li>
+        <li><strong>Actions:</strong> no further actions other than navigation links in header/footer</li>
+        <li><strong>Special Notes:</strong> Features background image and centered branding</li>
+      </ul>
+
+      <h4>About</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Describes the club’s mission, origin, and values.</li>
+        <li><strong>Audience:</strong> Interested students, faculty, or prospective members</li>
+        <li><strong>Content:</strong> Text and images about club history, mission, and leadership</li>
+        <li><strong>Form Input:</strong> No</li>
+        <li><strong>Validations:</strong> No</li>
+        <li><strong>Buttons/Links:</strong> Navigation links in header/footer</li>
+        <li><strong>Actions:</strong> no further actions other than navigation links in header/footer</li>
+        <li><strong>Special Notes:</strong> Simple layout, potentially with animated transitions</li>
+      </ul>
+
+      <h4>Schedule</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Lists practice times, events, and meeting info</li>
+        <li><strong>Audience:</strong> Club members and interested students</li>
+        <li><strong>Content:</strong> list of weekly training schedule</li>
+        <li><strong>Form Input:</strong> No</li>
+        <li><strong>Validations:</strong> No</li>
+        <li><strong>Buttons/Links:</strong> Navigation links in header/footer</li>
+        <li><strong>Actions:</strong> no further actions other than navigation links in header/footer</li>
+        <li><strong>Special Notes:</strong> might add advisory message if training times change due to weather or other conditions</li>
+      </ul>
+
+      <h4>Leadership</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Introduces current team leaders</li>
+        <li><strong>Audience:</strong> New members</li>
+        <li><strong>Content:</strong> Bios with a central group photo</li>
+        <li><strong>Form Input:</strong> No</li>
+        <li><strong>Validations:</strong> No</li>
+        <li><strong>Buttons/Links:</strong> Navigation links in header/footer</li>
+        <li><strong>Actions:</strong> no further actions other than navigation links in header/footer</li>
+        <li><strong>Special Notes:</strong> purely informative</li>
+      </ul>
+
+      <h4>Equipment</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Shows required gear (headgear, wraps, gloves, etc.)</li>
+        <li><strong>Audience:</strong> New members preparing to join</li>
+        <li><strong>Content:</strong> List of required and recommended items with links</li>
+        <li><strong>Form Input:</strong> No</li>
+        <li><strong>Validations:</strong> No</li>
+        <li><strong>Buttons/Links:</strong> Links to external gear sites (Amazon, etc.)</li>
+        <li><strong>Actions:</strong> Opens product links</li>
+        <li><strong>Special Notes:</strong> purely informative</li>
+      </ul>
+
+      <h4>Signup</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Allows new members to register</li>
+        <li><strong>Audience:</strong> Interested UNCC students</li>
+        <li><strong>Content:</strong> Form with name, email, and comments</li>
+        <li><strong>Form Input:</strong> Yes</li>
+        <li><strong>Validations:</strong> JavaScript validation + confirmation</li>
+        <li><strong>Buttons/Links:</strong> Submit and reset buttons</li>
+        <li><strong>Actions:</strong> Form submits and shows confirmation message</li>
+        <li><strong>Special Notes:</strong> May include checkbox for consent agreement</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>7. Notes & Signature</h3>
       <p><strong>Statement:</strong> I affirm this is my original work. No one else's code was copied or pasted.</p>
-      <p><strong>Signed:</strong> Bobby Yun, 03/30/2025 2:05AM</p>
-    </div>
+      <p><strong>Signed:</strong> Bobby Yun, 03/30/2025 2:05 AM</p>
+    </section>
   </main>
 
   <footer>
@@ -142,12 +203,5 @@
       <li><a href="https://github.com/hungry-bobby">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a></li>
     </ul>
-    <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank" rel="noopener noreferrer">BobbyBuiltIt.co</a></p>
-    <p><em>“Built By Bobby.”</em></p>
-    <p>
-      <a id="validation_link_html">HTML Validation</a> |
-      <a id="validation_link_css">CSS Validation</a>
-    </p>
-  </footer>
-</body>
-</html>
+    <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank">BobbyBuiltIt.co</a></p>
+    <p><em>“Built By Bobby.”</
