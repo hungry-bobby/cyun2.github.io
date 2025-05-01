@@ -83,6 +83,12 @@
       font-size: 1em;
     }
 
+    #charCount {
+      font-size: 0.9em;
+      color: #ccc;
+      text-align: right;
+    }
+
     input[type="submit"],
     input[type="reset"] {
       margin-top: 20px;
@@ -100,6 +106,16 @@
       background-color: #009966;
     }
 
+    .confirmation {
+      background-color: #006644;
+      padding: 15px;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: none;
+    }
+
     footer {
       background-color: #003f2a;
       color: white;
@@ -108,40 +124,16 @@
       font-size: 0.95em;
     }
 
-    .footer-contacts p {
+    .footer-contacts p,
+    .footer-links {
       margin: 5px 0;
     }
 
-    .footer-contacts a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    .footer-links {
-      margin: 15px 0;
-    }
-
-    .footer-links a {
-      color: white;
-      text-decoration: underline;
-      margin: 0 10px;
-    }
-
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    footer ul li {
-      display: inline;
-      margin: 0 10px;
-    }
-
-    footer ul li a,
+    .footer-links a,
     footer a {
       color: white;
       text-decoration: underline;
+      margin: 0 10px;
     }
   </style>
 </head>
@@ -172,16 +164,21 @@
       <input type="email" id="email" name="email" required>
 
       <label for="message">Additional Notes (optional)</label>
-      <textarea id="message" name="message" rows="4"></textarea>
+      <textarea id="message" name="message" rows="4" maxlength="250"></textarea>
+      <div id="charCount">0 / 250</div>
 
       <label>
-        <input type="checkbox" required>
+        <input type="checkbox" id="consent" required>
         I agree to the <a href="risk.html">risk and conduct policy</a>.
       </label>
 
       <input type="submit" value="Register">
       <input type="reset" value="Clear">
     </form>
+
+    <div class="confirmation" id="confirmationBox">
+      Thank you! Your registration has been received.
+    </div>
   </main>
 
   <footer>
@@ -196,20 +193,43 @@
         <strong>Phone:</strong> 555-555-5555
       </p>
     </div>
-  
+
     <div class="footer-links">
       <a href="https://webpages.charlotte.edu/cyun2/">CLT Web</a> |
       <a href="https://github.com/hungry-bobby">GitHub</a> |
       <a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a>
     </div>
-  
+
     <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank">BobbyBuiltIt.co</a></p>
     <p><em>“Built By Bobby.”</em></p>
-    <p>
-        <a href="https://www.freecodecamp.org/certification/BobbyYun/responsive-web-design/">Responsive Web Design Certification</a> |
-        <a href="https://www.freecodecamp.org/certification/BobbyYun/javascript-algorithms-and-data-structures-v8/">JADS Certification</a>
-      </p>
   </footer>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const confirmationBox = document.getElementById('confirmationBox');
+    const charCount = document.getElementById('charCount');
+    const messageInput = document.getElementById('message');
+
+    messageInput.addEventListener('input', () => {
+      charCount.textContent = `${messageInput.value.length} / 250`;
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const consent = document.getElementById('consent').checked;
+
+      if (name === '' || email === '' || !consent) {
+        alert('Please complete all required fields and agree to the policy.');
+        return;
+      }
+
+      confirmationBox.style.display = 'block';
+      form.reset();
+      charCount.textContent = '0 / 250';
+    });
+  </script>
 
 </body>
 </html>
