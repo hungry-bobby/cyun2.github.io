@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Charlotte Boxing Club – Signup</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <style>
+    body {
+      background-color: #005035;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px 15px;
+    }
+
+    .logo-text {
+      font-size: 3.5em;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      color: white;
+      letter-spacing: 4px;
+      text-shadow: 1px 1px #003f2a;
+      text-transform: uppercase;
+    }
+
+    nav {
+      background-color: #003f2a;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: underline;
+      font-size: 1em;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      background-color: #00452f;
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #007750;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #009966;
+    }
+
+    footer {
+      background-color: #003f2a;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95em;
+    }
+
+    .footer-contacts p {
+      margin: 5px 0;
+    }
+
+    .footer-contacts a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin: 15px 0;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    footer ul li a,
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="logo-text">Charlotte Boxing Club</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="project_home.html">Home</a></li>
+      <li><a href="project_about.html">About</a></li>
+      <li><a href="project_schedule.html">Schedule</a></li>
+      <li><a href="project_leadership.html">Leadership</a></li>
+      <li><a href="project_epuipment.html">Equipment</a></li>
+      <li><a href="project_signup.html">Signup</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Signup for Charlotte Boxing Club</h2>
+    <form id="signupForm">
+      <label for="name">Full Name*</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Additional Notes (optional)</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <label>
+        <input type="checkbox" required>
+        I agree to the <a href="#">risk and conduct policy</a>.
+      </label>
+
+      <input type="submit" value="Register">
+      <input type="reset" value="Clear">
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-contacts">
+      <p><strong>Contacts:</strong></p>
+      <p>
+        <strong>Name:</strong> Charlotte Boxing Club &nbsp;|&nbsp;
+        <strong>Organization:</strong> Charlotte Boxing Club
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:CharlotteBoxing@Charlotte.edu">CharlotteBoxing@Charlotte.edu</a> &nbsp;|&nbsp;
+        <strong>Phone:</strong> 555-555-5555
+      </p>
+    </div>
+  
+    <div class="footer-links">
+      <a href="https://webpages.charlotte.edu/cyun2/">CLT Web</a> |
+      <a href="https://github.com/hungry-bobby">GitHub</a> |
+      <a href="https://www.linkedin.com/in/bobby-yun/">LinkedIn</a>
+    </div>
+  
+    <p>&copy; 2025 <a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/" target="_blank">BobbyBuiltIt.co</a></p>
+    <p><em>“Built By Bobby.”</em></p>
+  </footer>
+
+</body>
+</html>
