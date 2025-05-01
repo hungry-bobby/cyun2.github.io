@@ -11,10 +11,10 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
 
     header {
-      text-align: center;
       padding: 30px 15px 15px;
     }
 
@@ -36,7 +36,6 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
 
     nav ul li {
@@ -50,30 +49,32 @@
       font-size: 1em;
     }
 
-    main {
+    section {
       padding: 40px 20px;
-      max-width: 900px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    h2 {
-      text-align: center;
+    h2, h3 {
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 10px;
     }
 
-    section {
-      margin-bottom: 40px;
+    .gear-section p {
+      margin: 8px 0;
     }
 
-    ul {
-      padding-left: 20px;
-      line-height: 1.6;
+    .white-link {
+      color: white;
+      text-decoration: underline;
+      display: block;
+      margin: 4px 0;
     }
 
     footer {
       background-color: #003f2a;
       color: white;
       padding: 30px 20px;
-      text-align: center;
       font-size: 0.95em;
     }
 
@@ -95,23 +96,6 @@
       text-decoration: underline;
       margin: 0 10px;
     }
-
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    footer ul li {
-      display: inline;
-      margin: 0 10px;
-    }
-
-    footer ul li a,
-    footer a {
-      color: white;
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -126,50 +110,34 @@
       <li><a href="project_about.html">About</a></li>
       <li><a href="project_schedule.html">Schedule</a></li>
       <li><a href="project_leadership.html">Leadership</a></li>
-      <li><a href="project_epuipment.html">Equipment</a></li>
+      <li><a href="project_equipment.html">Equipment</a></li>
       <li><a href="project_signup.html">Signup</a></li>
     </ul>
   </nav>
 
   <main>
-    <h2>Gear & Equipment Information</h2>
+    <section class="gear-section">
+      <h2>Gear & Equipment Information</h2>
 
-    <section>
       <h3>Required Gear</h3>
-      <ul>
-        <li>16 oz boxing gloves (RECOMMENDED)</li>
-        <li>180" hand wraps (RECOMMENDED)</li>
-      </ul>
-    </section>
+      <p>16 oz boxing gloves (RECOMMENDED)</p>
+      <p>180" hand wraps (RECOMMENDED)</p>
 
-    <section>
       <h3>Optional Gear</h3>
-      <ul>
-        <li>Boxing shoes</li>
-        <li>Mouthpiece and headgear (only needed for sparring)</li>
-      </ul>
-    </section>
+      <p>Boxing shoes</p>
+      <p>Mouthpiece and headgear (only needed for sparring)</p>
 
-    <section>
       <h3>Rental Gear</h3>
-      <ul>
-        <li>Some gloves and wraps are available for new members to borrow</li>
-        <li>See club officers for semester-long rental options</li>
-        <li>Rental gear must be kept clean and returned in good condition</li>
-      </ul>
-    </section>
+      <p>Some gloves and wraps are available for new members to borrow</p>
+      <p>See club officers for semester-long rental options</p>
+      <p>Rental gear must be kept clean and returned in good condition</p>
 
-    <section>
       <h3>Recommended Shopping Links</h3>
-      <ul>
-        <li><a href="https://www.amazon.com/s?k=16oz+boxing+gloves" target="_blank">Amazon – 16oz Gloves</a></li>
-        <li><a href="https://www.amazon.com/s?k=boxing+hand+wraps+180+inch" target="_blank">Amazon – Hand Wraps</a></li>
-        <li><a href="https://www.amazon.com/s?k=boxing+headgear" target="_blank">Amazon – Headgear</a></li>
-        <li><a href="https://www.amazon.com/s?k=boxing+shoes" target="_blank">Amazon – Boxing Shoes</a></li>
-      </ul>
-    </section>
+      <a class="white-link" href="https://www.amazon.com/s?k=16oz+boxing+gloves" target="_blank">Amazon – 16oz Gloves</a>
+      <a class="white-link" href="https://www.amazon.com/s?k=boxing+hand+wraps+180+inch" target="_blank">Amazon – Hand Wraps</a>
+      <a class="white-link" href="https://www.amazon.com/s?k=boxing+headgear" target="_blank">Amazon – Headgear</a>
+      <a class="white-link" href="https://www.amazon.com/s?k=boxing+shoes" target="_blank">Amazon – Boxing Shoes</a>
 
-    <section>
       <h3>Notes</h3>
       <p>New members don’t need all their own gear to start. Just bring water and workout clothes—we’ll help you gear up as needed!</p>
     </section>
@@ -178,14 +146,10 @@
   <footer>
     <div class="footer-contacts">
       <p><strong>Contacts</strong></p>
-      <p>
-        <strong>Name:</strong> Charlotte Boxing Club<br>
-        <strong>Organization:</strong> Charlotte Boxing Club
-      </p>
-      <p>
-        <strong>Email:</strong> <a href="mailto:CharlotteBoxing@Charlotte.edu">CharlotteBoxing@Charlotte.edu</a><br>
-        <strong>Phone:</strong> 555-555-5555
-      </p>
+      <p><strong>Name:</strong> Charlotte Boxing Club<br>
+      <strong>Organization:</strong> Charlotte Boxing Club</p>
+      <p><strong>Email:</strong> <a href="mailto:CharlotteBoxing@Charlotte.edu">CharlotteBoxing@Charlotte.edu</a><br>
+      <strong>Phone:</strong> 555-555-5555</p>
     </div>
 
     <div class="footer-links">
