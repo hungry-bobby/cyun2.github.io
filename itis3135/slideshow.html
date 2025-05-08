@@ -60,25 +60,25 @@
 
   <header>
     <h1>Bobby Yun’s Ballsy Yeti ITIS3135</h1>
+    <p>Explore the alphabet, one slide at a time!</p>
+    <nav>
+      <ul>
+        <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="contract.html">Contract</a></li>
+        <li><a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/">BobbyBuiltIt.co</a></li>
+        <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
+        <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
+        <li><a href="website_evaluations.html">Website Evaluation</a></li>
+        <li><a href="https://webpages.charlotte.edu/cyun2/itis3135/tables.html">HTML Tables</a></li>
+        <li><a href="BYOintro.html">BYO Intro</a></li>
+        <li><a href="slideshow.html">Slideshow</a></li>
+        <li><a href="drawing.html">Drawing</a></li>
+        <li><a href="project_overview.html">Project Overview</a></li>
+        <li><a href="project_home.html">Client Website</a></li>
+      </ul>
+    </nav>
   </header>
-  
-  <nav>
-    <ul>
-      <li><a href="https://webpages.charlotte.edu/cyun2/">Home</a></li>
-      <li><a href="introduction.html">Introduction</a></li>
-      <li><a href="contract.html">Contract</a></li>
-      <li><a href="https://webpages.charlotte.edu/cyun2/bobbybuiltit.co/">BobbyBuiltIt.co</a></li>
-      <li><a href="https://webpages.charlotte.edu/cyun2/ballsyyeti/">Whimsical Company</a></li>
-      <li><a href="https://webpages.charlotte.edu/cyun2/stuff/free%5EVBucks%5EHere.htm">CRAPPY Website</a></li>
-      <li><a href="website_evaluations.html">Website Evaluation</a></li>
-      <li><a href="https://webpages.charlotte.edu/cyun2/itis3135/tables.html">HTML Tables</a></li>
-      <li><a href="BYOintro.html">BYO Intro</a></li>
-      <li><a href="slideshow.html">Slideshow</a></li>
-      <li><a href="drawing.html">Drawing</a></li>
-      <li><a href="project_overview.html">Project Overview</a></li>
-      <li><a href="project_home.html">Client Website</a></li>
-    </ul>
-  </nav>
 
   <main>
     <h2>Bobby Yun's Alphabet Slideshow</h2>
@@ -131,42 +131,12 @@
       <a href="https://www.freecodecamp.org/certification/BobbyYun/responsive-web-design/">Responsive Web Design Certification</a> |
       <a href="https://www.freecodecamp.org/certification/BobbyYun/javascript-algorithms-and-data-structures-v8/">JADS Certification</a>
     </p>
+    <p>
+      <a href="https://validator.w3.org/">HTML Validation</a> |
+      <a href="https://jigsaw.w3.org/css-validator/">CSS Validation</a>
+    </p>
+    <script src="scripts/slideshow.js"></script>
   </footer>
-
-  <script>
-    const images = [
-      { src: "images/banana.jpg", caption: "B - Banana" },
-      { src: "images/octopus.jpg", caption: "O - Octopus" },
-      { src: "images/book.jpg", caption: "B - Book" },
-      { src: "images/basketball.jpg", caption: "B - Basketball" },
-      { src: "images/yoyo.jpg", caption: "Y - Yo-yo" },
-      { src: "images/yak.jpg", caption: "Y - Yak" },
-      { src: "images/umbrella.jpg", caption: "U - Umbrella" },
-      { src: "images/necklace.jpg", caption: "N - Necklace" }
-    ];
-
-    let current = 0;
-
-    function showSlide(index) {
-      const slide = images[index];
-      document.getElementById("slide").src = slide.src;
-      document.getElementById("slide").alt = slide.caption;
-      document.getElementById("caption").textContent = slide.caption;
-    }
-
-    function nextSlide() {
-      current = (current + 1) % images.length;
-      showSlide(current);
-    }
-
-    function prevSlide() {
-      current = (current - 1 + images.length) % images.length;
-      showSlide(current);
-    }
-
-    // Initialize first slide
-    showSlide(current);
-  </script>
 
 </body>
 </html>
