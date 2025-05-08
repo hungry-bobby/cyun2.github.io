@@ -6,28 +6,74 @@
   <link rel="stylesheet" href="styles/default.css" />
   <script src="scripts/survey.js" defer></script>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+    }
+
+    header, nav, footer {
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
     form {
       width: 60%;
-      margin: 0 auto;
+      margin: 2em auto;
       display: flex;
       flex-direction: column;
       gap: 1em;
+      background-color: #ffffff;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
     }
+
     label {
       display: block;
       margin-bottom: 0.5em;
     }
+
     input[type="text"],
     input[type="file"] {
       width: 100%;
       padding: 0.4em;
+      box-sizing: border-box;
     }
+
     fieldset {
       border: 1px solid #333;
       padding: 1em;
+      border-radius: 6px;
     }
+
     .course {
       margin-bottom: 1em;
+    }
+
+    button {
+      margin-top: 0.5em;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      display: inline;
+      margin: 0 10px;
     }
   </style>
 </head>
